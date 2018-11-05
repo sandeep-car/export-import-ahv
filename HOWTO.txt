@@ -1,0 +1,41 @@
+HOWTO get started:
+* Build Centos 7 VM.
+yum -y install emacs wget perl-core zlib-devel libffi-devel bzip2-devel readline-devel libuuid-devel sshpass
+yum groupinstall -y "Development Tools"
+# To use newer openssl libraries.
+# Add these to ~/.bashrc otherwise Python won't be able to find the ssl module.
+export LDFLAGS="-L/usr/local/lib64/"
+export LD_LIBRARY_PATH="/usr/local/lib64/"
+export CPPFLAGS="-I/usr/local/include -I/usr/local/include/openssl"
+. ~/.bashrc
+mkdir -p ~/source/openssl; cd ~/source/openssl
+wget https://www.openssl.org/source/openssl-1.1.1.tar.gz
+tar zxvf openssl-1.1.1.tar.gz
+cd openssl-1.1.1
+./config --prefix=/usr/local/ --openssldir=/usr/local/ shared zlib
+make
+make install
+mkdir -p ~/source/python3; cd ~/source/python3
+wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+tar zxvf Python-3.7.0.tgz
+cd Python-3.7.0
+# --enable-optimization seems to increase time of build.
+./configure --prefix=/usr/local  --with-openssl=/usr/local
+make 
+make altinstall
+cd /usr/local/bin
+ln -s pip3.7 pip
+ln -s python3.7 python
+cd ~/source
+git clone git://github.com/requests/requests.git
+cd requests
+# If pip here failed because of a weird SSL error, it means one of two things:
+# 1. Your ~/.bashrc wasn't updated properly, or it wasn't sourced. Update and  . ~/.bashrc
+# 2. Your openssl/python build failed, probably because you didn't source ~/.bashrc. Update your ~/.bashrc, re-source it and start over.
+pip install .
+pip install paramiko
+cd ~/source
+git clone git://github.com/sandeep-car/api-lab.git
+chmod 700 *.py
+./exportvm_on_source.py
+# Now read the README.md file.
