@@ -35,7 +35,8 @@ cd requests
 pip install .
 pip install paramiko
 cd ~/source
-git clone git://github.com/sandeep-car/api-lab.git
+git clone git://github.com/sandeep-car/export-import-ahv.git
+cd export-import-ahv
 chmod 700 *.py
 ./exportvm_on_source.py
 # Now read the README.md file.
