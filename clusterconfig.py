@@ -51,9 +51,6 @@ src_cvm_pwd = "blahblah"
 # This is the container where you upload your qcow2 files via SFTP.
 SFTPCONTAINER = "sftpcontainer"
 
-# This is the container used to upload images. Note that images and uploaded qcow2 files are different.
-IMPORTCONTAINER = "importcontainer"
-
 # Destination network name. This is the network to which VMs will be assigned.
 # You can go to Prism-> Network -> Virtual Networks and get this information.
 MYNETWORK = "server lan" 
