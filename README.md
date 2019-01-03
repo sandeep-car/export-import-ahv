@@ -78,4 +78,4 @@ If your VMs are configured in such a way where they each have different boot dri
 
 TODO:
 * Implement Ryan Rose's excellent suggestion on using multipart POST for uploading files.
-* Should exportcontainer and importcontainer be created by the script instead of manually? Other commands such as allssh and iptables?
+* Should exportcontainer and sftpcontainer be created by the script instead of manually? Other commands such as allssh and iptables?
