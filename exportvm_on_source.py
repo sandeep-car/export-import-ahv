@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3.7
 #
 # DISCLAIMER: This script is not supported by Nutanix. Please contact
-# Sandeep Cariapa (firstname.lastname@nutanix.com) if you have any questions.
+# Sandeep Cariapa (lastname@gmail.com) if you have any questions.
 # NOTE:
 # 1. You need a Python library called "requests" which is available from
 # the url: http://docs.python-requests.org/en/latest/user/install/#install
