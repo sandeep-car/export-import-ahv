@@ -1,5 +1,5 @@
 # DISCLAIMER: This script is not supported by Nutanix. Please contact
-# Sandeep Cariapa (firstname.lastname@nutanix.com) if you have any questions.
+# Sandeep Cariapa (lastname@gmail.com) if you have any questions.
 import os
 import re
 import csv
