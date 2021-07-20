@@ -79,3 +79,4 @@ If your VMs are configured in such a way where they each have different boot dri
 TODO:
 * Implement Ryan Rose's excellent suggestion on using multipart POST for uploading files.
 * Should exportcontainer and sftpcontainer be created by the script instead of manually? Other commands such as allssh and iptables?
+* It shouldn't be too much of a hassle to make this work on a generic KVM system as well. Email me and I can help if required.
