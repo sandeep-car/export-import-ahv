@@ -1,7 +1,7 @@
 # export-import-vms-AHV
 
 SYNOPSIS:
-This README file accompanies the two scripts that are required to export and import AHV VMs. There is also a config file which contains variables which must be modified to your environment. In addition there is a HOWTO file which describes the procedure to properly set up Python3, OpenSSL and sshpass on your Linux system.
+This README file accompanies the two scripts that are required to export and import AHV VMs. There is also a config file which contains variables which must be modified to your environment. In addition there is a HOWTO file which describes the procedure to properly set up Python3, OpenSSL and sshpass on your Linux system. This could be very easily modified to support generic KVMs. If you need help please let me know. My email address is encoded in the source code header.
 
 First, follow the instructions in the HOWTO to configure your Linux system. Then read this README file and clusterconfig.py in their entirety.
 
